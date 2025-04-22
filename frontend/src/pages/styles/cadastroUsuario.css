@@ -1,0 +1,310 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+}
+
+/* Header */
+.head {
+    width: 100%;
+    min-height: 70px;
+    background-color: rgb(184, 115, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.head h1 {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+.head a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.head a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Menu de Navegação */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(128, 128, 128);
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    display: block;
+    transition: all 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgb(150, 90, 45);
+    transform: translateY(-2px);
+    }
+
+/* Submenu */
+.menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(150, 90, 45);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    min-width: 180px;
+    list-style: none;
+    z-index: 100;
+}
+
+.menu li:hover ul {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu li ul li {
+    margin: 0;
+}
+
+.menu li ul a {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.menu li ul a:hover {
+    background-color: rgb(184, 115, 51);
+}
+
+/* Container de Cadastro */
+.cadastro-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.cadastro-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: rgb(184, 115, 51);
+    font-size: 1.8rem;
+}
+
+/* Formulário */
+.cadastro-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cadastro-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.cadastro-container input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.cadastro-container input:focus {
+    outline: none;
+    border-color: rgb(184, 115, 51);
+    box-shadow: 0 0 0 2px rgba(184, 115, 51, 0.2);
+}
+
+/* Grupo de Opções de Período */
+.periodo-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.periodo-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.periodo-option:hover {
+    background-color: rgba(184, 115, 51, 0.1);
+}
+
+.periodo-option input {
+    margin: 0;
+    width: auto;
+}
+
+/* Botão de Cadastro */
+.cadastro-container button {
+    padding: 14px;
+    background-color: rgb(184, 115, 51);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.cadastro-container button:hover {
+    background-color: rgb(150, 90, 45);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Link para Login */
+.login-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: rgb(128, 128, 128);
+}
+
+.login-link a {
+    color: rgb(184, 115, 51);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.login-link a:hover {
+    color: rgb(150, 90, 45);
+    text-decoration: underline;
+}
+
+/* Footer - Consistente com outras páginas */
+.foot {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(128, 128, 128);
+    color: white;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .head h1 {
+        margin: 0;
+        width: 100%;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu li {
+        margin: 5px 10px;
+    }
+
+    .cadastro-container {
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .periodo-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cadastro-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .cadastro-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .cadastro-container input,
+    .cadastro-container button {
+        padding: 12px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .menu li ul {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+}

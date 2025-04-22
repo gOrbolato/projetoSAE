@@ -1,0 +1,195 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+}
+
+/* Header */
+.head {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(184, 115, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap; 
+}
+  
+.head h1 {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    flex-grow: 1;
+}
+  
+.head p {
+    margin-left: auto;
+}
+  
+.head p a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 22px 25px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+  
+.head p a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container Principal (Padrão para formulários) */
+.recovery-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+    flex-grow: 1;
+}
+  
+.recovery-container h2 {
+    margin-bottom: 15px;
+    color: rgb(184, 115, 51);
+    font-size: 1.5rem;
+}
+  
+.recovery-container p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: rgb(128, 128, 128);
+    line-height: 1.5;
+}
+
+/* Mensagens */
+.error-message {
+    color: #e74c3c;
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+  
+.success-message {
+    color: #27ae60;
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* Formulários */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.form-input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+  
+.form-input:focus {
+    outline: none;
+    border-color: rgb(184, 115, 51);
+}
+  
+.form-button {
+    padding: 12px;
+    background-color: rgb(184, 115, 51);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+  
+.form-button:hover {
+    background-color: rgb(150, 90, 45);
+    transform: translateY(-2px);
+}
+
+/* Links */
+.back-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgb(128, 128, 128);
+}
+  
+.back-link a {
+    color: rgb(184, 115, 51);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+.back-link a:hover {
+    color: rgb(150, 90, 45);
+    text-decoration: underline;
+}
+
+/* Footer */
+.foot {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(128, 128, 128);
+    color: white;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .head h1 {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .main-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
+  
+@media (max-width: 480px) {
+    .main-container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .form-input,
+    .form-button {
+        padding: 10px 12px;
+    }
+    
+    .main-container h2 {
+        font-size: 1.3rem;
+    }
+    
+    .main-container p {
+        font-size: 0.85rem;
+    }
+}
