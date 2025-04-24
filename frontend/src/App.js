@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Login from './components/Login';
-import CadastroUsuario from './components/CadastroUsuario';
-import RecuperacaoSenha from './components/RecuperacaoSenha';
+import Login from './pages/Login';
+import CadastroUsuario from './pages/CadastroUsuario';
+import RecuperacaoSenha from './pages/RecuperacaoSenha';
 
 function App() {
   return (

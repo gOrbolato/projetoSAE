@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../pages/styles/cadastroUsuario.css';
+import '../styles/cadastroUsuario.css';
 import api from '../services/api';
 
 const CadastroUsuario = () => {
@@ -167,6 +167,17 @@ const CadastroUsuario = () => {
                 required
               />
               <span className="periodo-dot"></span> Diurno
+            </label>
+            <label className="periodo-option">
+              <input
+                type="radio"
+                name="periodo"
+                value="integral"
+                checked={formData.periodo === 'integral'}
+                onChange={handleChange}
+                required
+              />
+              <span className="periodo-dot"></span> Integral
             </label>
             <label className="periodo-option">
               <input

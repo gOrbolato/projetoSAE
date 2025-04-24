@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../pages/styles/recuperacaoSenha.css';
+import '../styles/recuperacaoSenha.css';
 import api from '../services/api';
 
 const RecuperacaoSenha = () => {
